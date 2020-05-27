@@ -1,0 +1,6 @@
+[submodule "simple-message-fronend"]
+	path = simple-message-fronend
+	url = https://github.com/sankarshan-kundu/simple-message-fronend.git
+[submodule "simple-message-backend"]
+	path = simple-message-backend
+	url = https://github.com/sankarshan-kundu/simple-message-backend.git
