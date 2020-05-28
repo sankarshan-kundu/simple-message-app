@@ -1,28 +1,29 @@
 version: "3"
 
 services:
-  db:
+  msg-db:
     image: simple-message/db:${TAG:-1.0}
     build:
       context: ./simple-message-db
-      dockerfile: Dockerfile
     ports:
       - 1433:1433
-    env_file: 
+    env_file:
       - ./simple-message-db/.env
 
-  api:
+  msg-api:
     image: simple-message/api:${TAG:-1.0}
     build:
       context: ./simple-message-api
-      dockerfile: Dockerfile
     ports:
       - 8000:80
+    depends_on:
+      - msg-db
 
-  ui:
+  msg-ui:
     image: simple-message/ui:${TAG:-1.0}
-    build: 
+    build:
       context: ./simple-message-ui
-      dockerfile: Dockerfile
     ports:
       - 4000:4200
+    depends_on:
+      - msg-api
