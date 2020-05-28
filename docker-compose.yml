@@ -16,6 +16,8 @@ services:
       context: ./simple-message-api
     ports:
       - 8000:80
+    env_file:
+      - ./simple-message-api/.env
     depends_on:
       - msg-db
 
