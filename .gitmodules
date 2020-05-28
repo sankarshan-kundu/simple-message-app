@@ -1,9 +1,9 @@
-[submodule "simple-message-fronend"]
-	path = simple-message-fronend
-	url = https://github.com/sankarshan-kundu/simple-message-fronend.git
-[submodule "simple-message-backend"]
-	path = simple-message-backend
-	url = https://github.com/sankarshan-kundu/simple-message-backend.git
 [submodule "simple-message-db"]
 	path = simple-message-db
 	url = https://github.com/sankarshan-kundu/simple-message-db.git
+[submodule "simple-message-api"]
+	path = simple-message-api
+	url = https://github.com/sankarshan-kundu/simple-message-api.git
+[submodule "simple-message-ui"]
+	path = simple-message-ui
+	url = https://github.com/sankarshan-kundu/simple-message-ui.git
