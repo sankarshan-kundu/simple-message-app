@@ -1,10 +1,20 @@
 version: "3"
 
 services:
+  message-db:
+    image: "message-db:${TAG:-1.0}"
+    build:
+      context: ./simple-message-db
+      dockerfile: Dockerfile
+    ports:
+      - 1433:1433
+    env_file: 
+      - ./simple-message-db/.env
+
   message-api:
     image: message-api:${TAG:-1.0}
-    build: 
+    build:
       context: ./simple-message-backend
       dockerfile: Dockerfile
-    ports: 
-      - 8080:80 
+    ports:
+      - 8080:80
