@@ -9,6 +9,8 @@ services:
       - 1433:1433
     env_file:
       - ./simple-message-db/.env
+    volumes:
+      - mssql:/var/opt/mssql
 
   msg-api:
     image: simple-message/api:${TAG:-1.0}
@@ -29,3 +31,6 @@ services:
       - 4000:4200
     depends_on:
       - msg-api
+
+volumes: 
+  mssql:
