@@ -5,8 +5,8 @@ services:
     image: simple-message/db:${TAG:-1.0}
     build:
       context: ./simple-message-db
-    ports:
-      - 1433:1433
+    # ports:
+    #   - 1433:1433
     env_file:
       - ./simple-message-db/.env
     volumes:
