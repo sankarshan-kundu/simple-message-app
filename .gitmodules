@@ -4,6 +4,3 @@
 [submodule "simple-message-api"]
 	path = simple-message-api
 	url = https://github.com/sankarshan-kundu/simple-message-api.git
-[submodule "simple-message-ui"]
-	path = simple-message-ui
-	url = https://github.com/sankarshan-kundu/simple-message-ui.git
