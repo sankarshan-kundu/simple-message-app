@@ -5,6 +5,6 @@ Initialize all submodules: `git submodule update --init --recursive`
 
 ## Some useful Docker compose commands
 
-* Build & start stack: `docker-compose up -d --build` 
-* View logs: `docker-compose logs -f` 
-* Stop stack: `docker-compose down` 
+* Build & start stack: `docker compose up -d --build` 
+* View logs: `docker compose logs -f` 
+* Stop stack: `docker compose down` 
