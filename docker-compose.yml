@@ -28,7 +28,7 @@ services:
     build:
       context: ./simple-message-ui
     ports:
-      - 4000:80
+      - 3030:3000
     depends_on:
       - msg-api
 
