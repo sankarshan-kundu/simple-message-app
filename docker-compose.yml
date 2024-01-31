@@ -17,20 +17,20 @@ services:
     build:
       context: ./simple-message-api
     ports:
-      - 8080:8080
+      - 8000:8080
     env_file:
       - ./simple-message-api/.env
     depends_on:
       - msg-db
 
-  # msg-ui:
-  #   image: simple-message/ui:${TAG:-1.0}
-  #   build:
-  #     context: ./simple-message-ui
-  #   ports:
-  #     - 4000:4200
-  #   depends_on:
-  #     - msg-api
+  msg-ui:
+    image: simple-message/ui:${TAG:-1.0}
+    build:
+      context: ./simple-message-ui
+    ports:
+      - 4000:80
+    depends_on:
+      - msg-api
 
 volumes: 
   mssql:
